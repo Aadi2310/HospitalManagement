@@ -1,5 +1,6 @@
 package com.hospital.HospitalManagement.entity;
 
+import com.hospital.HospitalManagement.entity.type.BloodGroupType;
 import jakarta.persistence.*;
 import lombok.ToString;
 
@@ -42,6 +43,8 @@ public class Patient {
 //                ", gender='" + gender + '\'' +
 //                '}';
 //    }
-private String bloodGroup;
+
+@Enumerated(EnumType.STRING)
+private BloodGroupType bloodGroup;
 
 }
